@@ -79,34 +79,9 @@
 
         .content h2 {
             color: #008000;
-            margin-top: 2.5rem; /* Space above headings */
-            margin-bottom: 1rem; /* Space below headings */
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
             line-height: 1.4;
-        }
-
-        .content p, .content ul, .content ol {
-            margin-bottom: 1.5rem; /* Add spacing between paragraphs and lists */
-            line-height: 1.8;
-        }
-
-        .content ul {
-            padding-left: 1.5rem; /* Indentation for bullet lists */
-        }
-
-        .content li {
-            margin-bottom: 0.5rem; /* Spacing between list items */
-        }
-
-        .toc {
-            background-color: #eef7ee;
-            padding: 1rem;
-            margin-bottom: 1.5rem;
-            border-left: 4px solid #008000;
-        }
-
-        .toc h3 {
-            margin: 0 0 0.5rem;
-            color: #333;
         }
 
         /* Table Styling */
@@ -117,25 +92,32 @@
             margin-bottom: 2rem;
         }
 
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-
         th {
-            background-color: #008000;
+            background-color: #1a3985;
             color: white;
             text-align: center;
-            padding: 0.75rem;
+            padding: 1rem;
         }
 
         td {
-            padding: 1rem;
+            padding: 1.2rem;
             text-align: left;
-            line-height: 1.6; /* Line spacing in table cells */
+            vertical-align: top;
+            line-height: 1.6;
         }
 
-        tr:nth-child(even) {
+        td:first-child {
+            font-weight: bold;
             background-color: #f2f2f2;
+            width: 20%;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover td {
+            background-color: #eef7ee;
         }
 
         /* Footer */
@@ -162,32 +144,9 @@
         <p>Understanding RFI, RFP, and RFQ for effective procurement</p>
     </div>
 
-    <!-- Table of Contents -->
+    <!-- Comparison Table -->
     <div class="content">
-        <div class="toc">
-            <h3>Table of Contents</h3>
-            <ul>
-                <li><a href="#intro">Introduction to RFx</a></li>
-                <li><a href="#comparison">RFI vs RFP vs RFQ</a></li>
-                <li><a href="#external-resources">External Resources</a></li>
-            </ul>
-        </div>
-
-        <!-- Introduction Section -->
-        <h2 id="intro">Introduction to RFx</h2>
-        <p>
-            RFx is an umbrella term for RFI (Request for Information), RFP (Request for Proposal), and RFQ (Request for Quote).
-            Each stage plays a critical role in procurement processes.
-        </p>
-        <p>Read more at:
-            <ul>
-                <li><a href="https://blog.hubspot.com/marketing/rfp-template#rfp-vs-rfi" target="_blank">What is the difference between RFP and RFI?</a></li>
-                <li><a href="https://www.investopedia.com/terms/r/request-for-proposal.asp" target="_blank">Request for Proposal Explained</a></li>
-            </ul>
-        </p>
-
-        <!-- Comparison Table -->
-        <h2 id="comparison">RFI vs RFP vs RFQ</h2>
+        <h2>RFI vs RFP vs RFQ</h2>
         <table>
             <tr>
                 <th>Aspect</th>
@@ -199,29 +158,32 @@
                 <td>Think of it as</td>
                 <td>Tell me what's possible</td>
                 <td>Show me your best solution</td>
-                <td>Tell me your price</td>
+                <td>Tell me your price for this specific need</td>
             </tr>
             <tr>
                 <td>What Client Wants</td>
                 <td>
                     <ul>
+                        <li>Information about available solutions</li>
                         <li>Market research</li>
-                        <li>Capabilities</li>
+                        <li>Understanding capabilities</li>
                         <li>No immediate buying decision</li>
                     </ul>
                 </td>
                 <td>
                     <ul>
-                        <li>Complete solution</li>
-                        <li>Value for money</li>
-                        <li>Implementation plan</li>
+                        <li>Complete solution to their problem</li>
+                        <li>Innovative approaches</li>
+                        <li>Best value for money</li>
+                        <li>Detailed implementation plan</li>
                     </ul>
                 </td>
                 <td>
                     <ul>
-                        <li>Exact pricing</li>
+                        <li>Exact pricing for defined requirements</li>
                         <li>Quick turnaround</li>
-                        <li>Meets requirements</li>
+                        <li>Meets specified requirements</li>
+                        <li>Best price for standard solution</li>
                     </ul>
                 </td>
             </tr>
@@ -229,32 +191,32 @@
                 <td>How to Respond</td>
                 <td>
                     <ul>
-                        <li>Provide high-level info</li>
-                        <li>Share experience</li>
+                        <li>Share your company's capabilities</li>
+                        <li>Provide high-level information</li>
+                        <li>Include relevant experience</li>
+                        <li>Keep it informative, not sales-focused</li>
+                        <li>No detailed pricing needed</li>
                     </ul>
                 </td>
                 <td>
                     <ul>
-                        <li>Technical solution</li>
-                        <li>Competitive pricing</li>
+                        <li>Focus on best technical solution</li>
+                        <li>Show understanding of requirements</li>
+                        <li>Demonstrate unique value</li>
+                        <li>Include detailed methodology</li>
+                        <li>Competitive pricing with justification</li>
                     </ul>
                 </td>
                 <td>
                     <ul>
-                        <li>Simple and direct pricing</li>
-                        <li>Show compliance</li>
+                        <li>Focus on meeting exact specifications</li>
+                        <li>Provide most competitive pricing</li>
+                        <li>Keep it simple and direct</li>
+                        <li>Show compliance to requirements</li>
                     </ul>
                 </td>
             </tr>
         </table>
-
-        <!-- External Resources -->
-        <h2 id="external-resources">External Resources</h2>
-        <p>Learn more with these resources:</p>
-        <ul>
-            <li><a href="https://www.geeksforgeeks.org/system-design-tutorial/?ref=ghm" target="_blank">GeeksforGeeks: System Design</a></li>
-            <li><a href="https://www.investopedia.com/" target="_blank">Investopedia</a></li>
-        </ul>
     </div>
 
     <!-- Footer -->
