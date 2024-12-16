@@ -50,9 +50,6 @@
             border-radius: 5px;
             text-decoration: none;
             transition: background-color 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
 
         .back-button:hover {
@@ -71,140 +68,75 @@
         .hero h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
         .hero p {
             font-size: 1.2rem;
             opacity: 0.9;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.6;
         }
 
-        /* Cards Grid */
-        .cards-grid {
+        /* Content Section */
+        .content {
             max-width: 1200px;
-            margin: 0 auto 3rem;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            padding: 0 2rem;
-            flex-grow: 1;
-        }
-
-        /* Card Styles */
-        .card {
+            margin: 0 auto;
+            padding: 2rem;
             background: white;
-            border-radius: 15px;
-            padding: 2.5rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .card-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            width: fit-content;
-            padding: 1rem;
-            background: #f8f9fa;
-            border-radius: 12px;
-        }
-
-        .card h2 {
-            color: #1a6985;
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 1rem;
-        }
-
-        .card p {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .features-list {
-            list-style: none;
-            margin-top: auto;
-        }
-
-        .features-list li {
-            margin-bottom: 0.8rem;
-            padding-left: 1.8rem;
-            position: relative;
-            color: #555;
-            line-height: 1.4;
-        }
-
-        .features-list li::before {
-            content: "→";
+        .content h2 {
             color: #0088cc;
-            position: absolute;
-            left: 0;
+            margin-bottom: 1rem;
         }
 
-        /* Card Types */
-        .intro-card {
-            border-top: 4px solid #0088cc;
+        .content a {
+            color: #0056b3;
+            text-decoration: none;
         }
 
-        .rfi-card {
-            border-top: 4px solid #2ecc71;
+        .content a:hover {
+            text-decoration: underline;
         }
 
-        .rfp-card {
-            border-top: 4px solid #e74c3c;
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
         }
 
-        .rfq-card {
-            border-top: 4px solid #f1c40f;
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1a6985;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
         }
 
         /* Footer */
         .footer {
             background-color: #2c3e50;
             color: white;
-            padding: 2rem;
             text-align: center;
-            margin-top: auto;
+            padding: 1.5rem;
+            margin-top: 3rem;
         }
 
-        .footer p {
-            opacity: 0.8;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav {
-                padding: 1rem 2rem;
-            }
-
-            .hero {
-                padding: 6rem 1rem 3rem;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .cards-grid {
-                grid-template-columns: 1fr;
-                padding: 1rem;
-            }
-
-            .card {
-                padding: 1.5rem;
-            }
-        }
     </style>
 </head>
 <body>
@@ -214,77 +146,107 @@
             <div class="logo">
                 <img src="https://erpnext.matrixstride.com/files/matrixstride_logo.png" alt="MatrixStride Logo">
             </div>
-            <a href="index.html" class="back-button">
-                <span>←</span>
-                <span>Back to Home</span>
-            </a>
+            <a href="index.html" class="back-button">← Back to Home</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
         <h1>RFx Quick Guide</h1>
-        <p>Master the complete lifecycle of RFx processes - from initial information gathering to final quotation</p>
+        <p>Master the complete lifecycle of RFx processes - from initial information gathering to final quotation.</p>
     </section>
 
-    <!-- Cards Grid -->
-    <div class="cards-grid">
-        <!-- Introduction Card -->
-        <div class="card intro-card">
-            <div class="card-icon">📚</div>
-            <h2>Introduction to RFx</h2>
-            <p>A comprehensive overview of RFx processes in business procurement and vendor management.</p>
-            <ul class="features-list">
-                <li>Understanding RFx terminology</li>
-                <li>Process lifecycle and workflows</li>
-                <li>Best practices and guidelines</li>
-                <li>Key success factors</li>
+    <!-- Content Section -->
+    <section class="content">
+        <h2>Introduction to RFx</h2>
+        <p>
+            RFx is an umbrella term used for Request for Information (RFI), Request for Proposal (RFP), and Request for Quote (RFQ).
+            Each phase plays a critical role in procurement processes and vendor management.
+        </p>
+        <p>
+            To learn more about RFx, check these helpful articles:
+            <ul>
+                <li><a href="https://blog.hubspot.com/marketing/rfp-template#rfp-vs-rfi" target="_blank">What is the difference between RFP and RFI?</a></li>
+                <li><a href="https://www.investopedia.com/terms/r/request-for-proposal.asp" target="_blank">Request for Proposal Explained</a></li>
             </ul>
-        </div>
+        </p>
 
-        <!-- RFI Card -->
-        <div class="card rfi-card">
-            <div class="card-icon">ℹ️</div>
-            <h2>Request for Information</h2>
-            <p>Initial phase for gathering essential information about potential solutions and suppliers.</p>
-            <ul class="features-list">
-                <li>Market research strategies</li>
-                <li>Supplier capability assessment</li>
-                <li>Information collection methods</li>
-                <li>Analysis frameworks</li>
-            </ul>
-        </div>
-
-        <!-- RFP Card -->
-        <div class="card rfp-card">
-            <div class="card-icon">📝</div>
-            <h2>Request for Proposal</h2>
-            <p>Detailed proposal phase for evaluating comprehensive solutions and approaches.</p>
-            <ul class="features-list">
-                <li>Requirements specification</li>
-                <li>Evaluation criteria development</li>
-                <li>Proposal structure guidelines</li>
-                <li>Selection methodology</li>
-            </ul>
-        </div>
-
-        <!-- RFQ Card -->
-        <div class="card rfq-card">
-            <div class="card-icon">💰</div>
-            <h2>Request for Quote</h2>
-            <p>Final phase focusing on pricing and commercial terms for specific products or services.</p>
-            <ul class="features-list">
-                <li>Pricing structure analysis</li>
-                <li>Terms and conditions review</li>
-                <li>Vendor comparison methods</li>
-                <li>Negotiation strategies</li>
-            </ul>
-        </div>
-    </div>
+        <h2>Comparison of RFI, RFP, and RFQ</h2>
+        <table>
+            <tr>
+                <th>Aspect</th>
+                <th>RFI (Request for Information)</th>
+                <th>RFP (Request for Proposal)</th>
+                <th>RFQ (Request for Quote)</th>
+            </tr>
+            <tr>
+                <td><strong>Think of it as</strong></td>
+                <td>Tell me what's possible</td>
+                <td>Show me your best solution</td>
+                <td>Tell me your price for this specific need</td>
+            </tr>
+            <tr>
+                <td><strong>What Client Wants</strong></td>
+                <td>
+                    <ul>
+                        <li>Information about available solutions</li>
+                        <li>Market research</li>
+                        <li>Understanding capabilities</li>
+                        <li>No immediate buying decision</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Complete solution to their problem</li>
+                        <li>Innovative approaches</li>
+                        <li>Best value for money</li>
+                        <li>Detailed implementation plan</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Exact pricing for defined requirements</li>
+                        <li>Quick turnaround</li>
+                        <li>Meets specified requirements</li>
+                        <li>Best price for standard solution</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>How to Respond</strong></td>
+                <td>
+                    <ul>
+                        <li>Share your company's capabilities</li>
+                        <li>Provide high-level information</li>
+                        <li>Include relevant experience</li>
+                        <li>Keep it informative, not sales-focused</li>
+                        <li>No detailed pricing needed</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Focus on best technical solution</li>
+                        <li>Show understanding of requirements</li>
+                        <li>Demonstrate unique value</li>
+                        <li>Include detailed methodology</li>
+                        <li>Competitive pricing with justification</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Focus on meeting exact specifications</li>
+                        <li>Provide most competitive pricing</li>
+                        <li>Keep it simple and direct</li>
+                        <li>Show compliance to requirements</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2023 MatrixStride Solutions. All rights reserved.</p>
+        <p>&copy; 2024 MatrixStride Solutions. All rights reserved.</p>
     </footer>
 </body>
 </html>
